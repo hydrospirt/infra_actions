@@ -39,7 +39,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: hydrospirt/infra-web:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/infra-web:latest
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
